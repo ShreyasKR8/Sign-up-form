@@ -62,24 +62,35 @@ body {
 }
 
 .form-section p {
-    padding: 20px 0 0 50px;
+    padding: 20px 0 0 70px;
     font-size: 21px;
 }
 
 .form-container {
-    padding: 20px 50px;
+    padding: 20px 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.form-container p {
     position: relative;
 }
 
 .form-input {
-    /* border: 1px solid red; */
     width: 200px;
     margin-bottom: 20px;
+}
+
+.submit-button {
+    position: absolute;
+    top: 250px;
+    left: 70px;
+}
+
+button {
+    background-color: #596D48;
+    border: none;
+    font-size: 16px;
+    padding: 12px 40px;
+    border-radius: 7px;
+    cursor: pointer;
 }
 
 input {
