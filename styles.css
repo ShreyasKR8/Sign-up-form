@@ -112,12 +112,33 @@ body {
 }
 
 button {
-    background-color: #596D48;
+    background-color: #999999;
+    background-color: #35412b; 
     border: none;
     font-size: 16px;
     padding: 12px 40px;
+    padding: 0;
     border-radius: 7px;
     cursor: pointer;
+}
+
+.front {
+    display: block;
+    transform: translate(0, -3px);
+    background-color: #596D48;
+    padding: 12px 40px;
+    border-radius: 7px;
+    transition: transform 150ms;
+}
+
+button:hover .front {
+    background-color: #697B5A;
+    transform: translateY(-4px);
+}
+
+button:active .front {
+    background-color: #697B5A;
+    transform: translateY(-1px);
 }
 
 input {
