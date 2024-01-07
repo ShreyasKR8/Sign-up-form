@@ -143,6 +143,15 @@ button:active .front {
 
 input {
     width: 250px;
+    height: 25px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid rgb(44, 148, 183);
+    box-shadow: 1px 2px 4px rgb(176, 176, 176);
 }
 
 label {
