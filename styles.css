@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Norse-Bold';
-    src: url('fonts/norse-bold-webfont.woff') format('woff');
+    src: url('fonts/norse-bold-webfont.woff') format('woff'),
+    url('fonts/norse-kawl-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -101,7 +102,7 @@ body {
 }
 
 .form-input {
-    width: 200px;
+    width: 270px;
     margin-bottom: 20px;
 }
 
@@ -144,9 +145,24 @@ button:active .front {
 input {
     width: 250px;
     height: 25px;
+    padding: 3px;
     border: 1px solid #b3b3b3;
     border-radius: 4px;
     outline: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+}
+
+input:valid + span::after {
+    content: "✓";
+    color: green;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid + span::after {
+    content: "✖";
+    color: red;
 }
 
 input:focus {
@@ -169,4 +185,8 @@ label {
 .login a {
     text-decoration: none;
     color: #596D48;
+}
+
+.login a:hover {
+    text-decoration: underline;
 }

@@ -29,32 +29,40 @@
             <form class="form-container">
                 <div class="form-input">
                     <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="first-name" required>
+                    <input type="text" id="first-name" name="first-name" placeholder="" required>
+                    <span></span>
                 </div>
                 <div class="form-input">
                     <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" name="last-name" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="" required>
+                    <span></span>
                 </div>
                 <div class="form-input">
                     <label for="email">EMAIL</label>
                     <input type="email" id="email" name="email" 
-                    pattern="^\w+([\.])?\w+@[a-z]+\.[a-z]{2,3}(\.[a-z]{2,3})?$" required>
+                    pattern="^\w+([\.])?\w+@[a-z]+\.[a-z]{2,3}(\.[a-z]{2,3})?$" placeholder="" required>
+                    <span></span>
                 </div>
                 <div class="form-input">
                     <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" id="phone-number" name="phone-number" required>
+                    <input type="tel" id="phone-number" name="phone-number" pattern="\d{10}" maxlength="10" placeholder="" required>
+                    <span></span>
                 </div>
                 <div class="form-input">
                     <label for="password">PASSWORD</label>
                     <input type="password" id="password" name="password"
-                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@&$!%*#])[A-Za-z\d@&$!%*#]{8,}$" 
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@&$!%*#])[A-Za-z\d@&$!%*#]{8,}$"
+                    placeholder=""
                     required>
+                    <span></span>
                 </div>
                 <div class="form-input">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
                     <input type="password" id="confirm-password" name="confirm-password"
                     pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@&$!%*#])[A-Za-z\d@&$!%*#]{8,}$" 
+                    placeholder=""
                     required>
+                    <span></span>
                 </div>
                 <div class="submit-button">
                     <button type="submit"><span class="front">Create Account</span></button>
