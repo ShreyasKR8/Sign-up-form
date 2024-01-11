@@ -87,6 +87,7 @@ body {
     box-shadow: 0px 3px 5px rgb(210, 210, 210);
     margin-top: 60px;
     background-color: white;
+    height: 280px;
 }
 
 .form-section p {
@@ -108,7 +109,7 @@ body {
 
 .submit-button {
     position: absolute;
-    top: 250px;
+    top: 260px;
     left: 70px;
 }
 
@@ -151,23 +152,25 @@ input {
     outline: none;
 }
 
-input:not(:focus):not(:placeholder-shown):invalid {
-    border: 1px solid red;
-}
-
-input:valid + span::after {
-    content: "✓";
-    color: green;
-}
-
-input:not(:focus):not(:placeholder-shown):invalid + span::after {
-    content: "✖";
-    color: red;
-}
 
 input:focus {
     border: 2px solid rgb(44, 148, 183);
     box-shadow: 1px 2px 4px rgb(176, 176, 176);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+}
+
+
+input:not([type="password"]):valid + span::after {
+    content: "✓";
+    color: green;
+}
+
+input:not([type="password"]):not(:focus):not(:placeholder-shown):invalid + span::after {
+    content: "✖";
+    color: red;
 }
 
 label {
@@ -178,7 +181,7 @@ label {
 
 .login {
     font-size: 18px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 70px;
 }
 
@@ -189,4 +192,13 @@ label {
 
 .login a:hover {
     text-decoration: underline;
+}
+
+.password-error:focus {
+    border-color: red;
+}
+
+.password-error + span::after {
+    content: "Passwords don't match";
+    color: red;
 }
