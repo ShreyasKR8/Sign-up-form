@@ -180,6 +180,7 @@ label {
 }
 
 .login {
+    width: fit-content;
     font-size: 18px;
     margin-top: 80px;
     margin-left: 70px;
@@ -201,4 +202,15 @@ label {
 .password-error + span::after {
     content: "Passwords don't match";
     color: red;
+}
+
+.password-rules {
+    position: absolute;
+    bottom: 80px;
+    right: 400px;
+    /* display: none; */
+}
+
+ul {
+    margin-left: 20px;
 }
