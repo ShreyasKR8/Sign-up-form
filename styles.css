@@ -211,6 +211,25 @@ label {
     display: none;
 }
 
-ul {
+.password-rules > p {
+    /* border: 1px solid red; */
+}
+
+.password-rules > ul {
     margin-left: 20px;
+    list-style: circle;
+}
+
+.password-rules > ul >li{
+    /* border: 1px solid red; */
+}
+
+.checked-rules {
+    list-style: none;
+}
+
+.checked-rules::before {
+    content: "\2714\0020";
+    color: green;
+    margin-left: -18px;
 }
