@@ -207,8 +207,8 @@ label {
 .password-rules {
     position: absolute;
     bottom: 80px;
-    right: 400px;
-    /* display: none; */
+    right: 300px;
+    display: none;
 }
 
 ul {
