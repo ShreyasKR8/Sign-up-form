@@ -167,7 +167,6 @@ input + span {
 
 input + span::after {
     position: absolute;
-    /* top: 6px; */
     left: 5px;
 }
 
@@ -213,13 +212,20 @@ label {
     text-decoration: underline;
 }
 
+.password-error + span {
+    position: relative;
+}
+
 .password-error:focus {
     border-color: red;
 }
 
 .password-error + span::after {
+    position: absolute;
+    width: 150px;
     content: "Passwords don't match";
     color: red;
+    top: 3px;
 }
 
 .password-rules {
