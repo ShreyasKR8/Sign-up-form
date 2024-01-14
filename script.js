@@ -5,12 +5,12 @@ const checkRuleUpLetter = document.querySelector(".uppercase-letter");
 const checkRuleNum = document.querySelector(".num");
 const checkRuleSpecialChar = document.querySelector(".special-character");
 const checkRuleLength = document.querySelector(".length");
-const submitButton = document.querySelector("button")
 
 password1.addEventListener("focusin", showPasswordRules)
 password1.addEventListener("focusout", hidePasswordRules)
 password1.addEventListener("input", validatePasswordRules);
 password2.addEventListener("input", validateConfirmPassword);
+password2.addEventListener("focusout", finalValidateConfirmPassword);
 
 let uppercaseLetter = /[A-Z]/;
 let num = /[0-9]/;
@@ -64,6 +64,20 @@ function showPasswordRules()
 function validateConfirmPassword(evt)
 {
     if(!password1.value.includes(password2.value))
+    {
+        password2.classList.add("password-error");
+        password2.setCustomValidity("Passwords do not match");
+    }
+    else 
+    {
+        password2.classList.remove("password-error");
+        password2.setCustomValidity("");
+    }
+}
+
+function finalValidateConfirmPassword()
+{
+    if(password1.value !== password2.value)
     {
         password2.classList.add("password-error");
         password2.setCustomValidity("Passwords do not match");
