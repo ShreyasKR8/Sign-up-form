@@ -5,6 +5,7 @@ const checkRuleUpLetter = document.querySelector(".uppercase-letter");
 const checkRuleNum = document.querySelector(".num");
 const checkRuleSpecialChar = document.querySelector(".special-character");
 const checkRuleLength = document.querySelector(".length");
+const submitButton = document.querySelector("button")
 
 password1.addEventListener("focusin", showPasswordRules)
 password1.addEventListener("focusout", hidePasswordRules)
@@ -48,7 +49,6 @@ function validatePasswordRules()
     else {
         checkRuleLength.classList.remove("checked-rules");
     }
-
 }
 
 function hidePasswordRules()
@@ -61,14 +61,16 @@ function showPasswordRules()
     passwordRules.style.display = "block";
 }
 
-function validateConfirmPassword()
+function validateConfirmPassword(evt)
 {
     if(!password1.value.includes(password2.value))
     {
         password2.classList.add("password-error");
+        password2.setCustomValidity("Passwords do not match");
     }
-    else
+    else 
     {
         password2.classList.remove("password-error");
+        password2.setCustomValidity("");
     }
 }

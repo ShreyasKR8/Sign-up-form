@@ -152,7 +152,6 @@ input {
     outline: none;
 }
 
-
 input:focus {
     border: 2px solid rgb(44, 148, 183);
     box-shadow: 1px 2px 4px rgb(176, 176, 176);
@@ -162,13 +161,17 @@ input:not(:focus):not(:placeholder-shown):invalid {
     border: 1px solid red;
 }
 
-
 input:not([type="password"]):valid + span::after {
     content: "✓";
     color: green;
 }
 
 input:not([type="password"]):not(:focus):not(:placeholder-shown):invalid + span::after {
+    content: "✖";
+    color: red;
+}
+
+#password:not(:focus):not(:placeholder-shown):invalid + span::after {
     content: "✖";
     color: red;
 }
