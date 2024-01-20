@@ -97,14 +97,20 @@ body {
 
 .form-container {
     padding: 20px 70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
     position: relative; /* for submit button */
 }
 
 .form-input {
     width: 270px;
     margin-bottom: 20px;
+}
+
+.form-input:nth-of-type(odd) {
+    margin-bottom: 20px;
+    margin-right: 40px;
 }
 
 .submit-button {
