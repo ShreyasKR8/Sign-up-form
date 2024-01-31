@@ -88,17 +88,20 @@ body {
     margin-top: 60px;
     background-color: white;
     height: 280px;
+    display: grid;
+    grid-template-columns: 630px 300px;
 }
 
-.form-section p {
+.form-section > p {
     padding: 20px 0 0 70px;
     font-size: 21px;
+    grid-column: 1 / 3;
 }
 
 .form-container {
     padding: 20px 70px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 310px);
     position: relative; /* for submit button */
 }
 
@@ -229,10 +232,10 @@ label {
 }
 
 .password-rules {
-    position: absolute;
-    bottom: 70px;
-    right: 220px;
     display: none;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    align-self: self-end;
 }
 
 .password-rules > ul {
