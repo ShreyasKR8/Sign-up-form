@@ -233,9 +233,9 @@ label {
 
 .password-rules {
     display: none;
-    padding-bottom: 30px;
+    align-self: center;
+    padding-top: 20px;
     padding-left: 20px;
-    align-self: self-end;
 }
 
 .password-rules > ul {
