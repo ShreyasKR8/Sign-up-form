@@ -16,9 +16,3 @@ This project is a part of The Odin Project course, focused on developing a web p
 - HTML
 - CSS (Grid, Flexbox)
 - JavaScript
-
-## Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/responsive-web-page.git
